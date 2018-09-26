@@ -54,8 +54,8 @@ class Wp_Hmbu_Rest {
 
 	}
 
-	public function check_authority ($result, $server, $request) {
-		$api_key = $request->get_header('x-api-key');
+	public function check_authority ($server) {
+		$api_key = $server->get_headers($_SERVER)['X_API_KEY'];
 
 		$key = get_option('apikey');
 

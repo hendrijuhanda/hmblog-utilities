@@ -180,7 +180,7 @@ class Wp_Hmbu {
 	private function define_rest_hooks() {
 		$plugin_rest = new Wp_Hmbu_Rest( $this->get_plugin_name(), $this->get_version() );
 
-		$this->loader->add_action( 'rest_pre_dispatch', $plugin_rest, 'check_authority', 10, 3 );
+		$this->loader->add_action( 'rest_api_init', $plugin_rest, 'check_authority', 1 );
 	}
 
 	/**

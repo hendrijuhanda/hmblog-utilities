@@ -101,7 +101,16 @@ class Wp_Hmbu_Public {
 	}
 
 	public function check_theme_render () {
-		if (!is_admin()) {
+		$is_rest = false;
+
+		if (!empty($_SERVER['REQUEST_URI'])) {
+			$sRestUrlBase = get_rest_url(get_current_blog_id(), '/');
+			$sRestPath = trim( parse_url($sRestUrlBase, PHP_URL_PATH ), '/');
+			$sRequestPath = trim($_SERVER[ 'REQUEST_URI' ], '/');
+			$is_rest = (strpos($sRequestPath, $sRestPath) === 0);
+		}
+
+		if (!is_admin() && !$is_rest) {
 			$disabled = get_option('disable_render');
 
 			if ($disabled) {

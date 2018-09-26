@@ -102,7 +102,7 @@ class Wp_Hmbu_Public {
 
 	public function check_theme_render () {
 		if (!is_admin()) {
-			$disabled = 0;
+			$disabled = get_option('disable_render');
 
 			if ($disabled) {
 				header('HTTP/1.0 403 Forbidden');

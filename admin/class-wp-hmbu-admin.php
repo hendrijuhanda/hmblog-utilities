@@ -101,11 +101,16 @@ class Wp_Hmbu_Admin {
 	}
 
 	public function add_plugin_admin_menu() {
-		add_options_page( 'Honest Mining Blog Utilities', 'HM Utilities', 'manage_options', $this->plugin_name, array($this, 'display_plugin_setup_page')
+		add_options_page( 'Honest Mining Utilities', 'HM Utilities', 'manage_options', $this->plugin_name, array($this, 'display_plugin_setup_page')
     	);
 	}
 
 	public function display_plugin_setup_page() {
 		include_once( 'partials/wp-hmbu-admin-display.php' );
+	}
+
+	public function options_update() {
+		register_setting($this->plugin_name, 'apikey');
+		register_setting($this->plugin_name, 'disable_render');
 	}
 }

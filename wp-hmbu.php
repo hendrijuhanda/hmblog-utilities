@@ -13,9 +13,9 @@
  * @package           Wp_Hmbu
  *
  * @wordpress-plugin
- * Plugin Name:       Honest Mining Blog Utitilities
+ * Plugin Name:       Honest Mining Utilities
  * Plugin URI:        https://github.com/hendrijuhanda/hmblog-utilities
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       Honest Mining blog settings related to connection with main site.
  * Version:           1.0.0
  * Author:            Hendri Juhanda
  * Author URI:        http://juhanda.net

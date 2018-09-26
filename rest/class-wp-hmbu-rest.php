@@ -57,7 +57,7 @@ class Wp_Hmbu_Rest {
 	public function check_authority ($result, $server, $request) {
 		$api_key = $request->get_header('x-api-key');
 
-		$key = 'keys';
+		$key = get_option('apikey');
 
 		if (!$api_key || $api_key !== $key) {
 			header('HTTP/1.0 403 Forbidden');

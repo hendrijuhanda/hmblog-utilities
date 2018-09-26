@@ -110,7 +110,9 @@ class Wp_Hmbu_Public {
 			$is_rest = (strpos($sRequestPath, $sRestPath) === 0);
 		}
 
-		if (!is_admin() && !$is_rest) {
+		$is_login = $GLOBALS['pagenow'] === 'wp-login.php';
+
+		if (!is_admin() && !$is_rest && !$is_login) {
 			$disabled = get_option('disable_render');
 
 			if ($disabled) {

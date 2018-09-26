@@ -34,7 +34,7 @@
             <tr>
                 <th scope="row"><label for="apikey">API Key</label></th>
                 <td><input name="apikey" type="text" id="apikey" aria-describedby="api-key" class="large-text" value="<?php echo ($apikey ?: ''); ?>">
-                <p class="description" id="api-key">The key to authorize connection with Honest Mining main site blog front-end. The value must be exactly same with .env APP_KEY.</p></td>
+                <p class="description" id="api-key">The key to authorize connection with Honest Mining main site blog front-end. The value must be exactly same with .env BLOG_API_KEY.</p></td>
             </tr>
             <tr>
                 <th scope="row">Front-End Render</th>

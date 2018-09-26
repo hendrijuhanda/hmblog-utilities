@@ -30,7 +30,8 @@ class Wp_Hmbu_Deactivator {
 	 * @since    1.0.0
 	 */
 	public static function deactivate() {
-		
+		delete_option('apikey');
+		delete_option('disable_render');
 	}
 
 }
